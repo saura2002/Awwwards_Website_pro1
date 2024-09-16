@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bodoni Moda", serif;
+}
+html,
+body {
+  /* position: relative; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevents default scrolling, use locomotive scroll */
+}
+
+#minicircle {
+  width: 15px;
+  height: 15px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  position: absolute;
+  z-index: 99999;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255); 
+}
+
+.bounding {
+  width: fit-content;
+  overflow: hidden;
+}
+.bounding .boundingelem {
+  transform: translateY(100%);
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 40px;
+}
+
+#nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+#heading {
+  margin-top: 60px;
+}
+
+#heading h1 {
+  font-size: 9.5vw;
+  /* we are using vw for responsiveness */
+  font-weight: 900;
+  margin-left: 40px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  line-height: 0.85;
+}
+
+#heading #secondh1 {
+  margin-left: 212px;
+}
+
+.blockText {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* its size fits according to the content and our content is secondh1 */
+}
+
+.blockText h5 {
+  padding: 10px 0px;
+  font-size: 15.5px;
+  text-transform: uppercase;
+  /* vs
+    position: absolute;
+    left: 56%; 
+    using this is bad for responsivess*/
+}
+
+#writtenText {
+  margin-top: 190px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#writtenText h5 {
+  margin-top: 0.5vw;
+  font-size: 1vw;
+  line-height: 2;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#herofooter {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+
+#herofooter a {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+
+#herofooter #iconset {
+  display: flex;
+  gap: 5px;
+}
+
+#herofooter .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+  background-color: rgb(141, 141, 141);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+/* second page */
+
+#secondPage {
+  color: white;
+  padding-right: 10vw;
+  padding-top: 200px;
+  width: 100%;
+  height: 100vh;
+}
+
+.elem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3.5vw 2vw;
+  padding-right: 0;
+  border-top: 1px solid #888;
+  cursor: none;
+}
+.elem h1 {
+  text-transform: uppercase;
+  font-size: 7.5vw;
+  opacity: 0.7;
+  font-weight: 600;
+  cursor: none;
+}
+
+.elemlast {
+  border-bottom: 1px solid #888;
+}
+
+.elem img {
+    opacity: 0;
+  position: absolute;
+  z-index: 9999;
+  width: 30%; /* Adjust according to actual image size */
+  height: 130%; /* Adjust according to actual image size */
+  pointer-events: none; /* Prevent interaction with the image */
+  /* Center the image */
+  /* top: 50%;
+  left: 50%;
+  */
+  transform: translate(-50%, -50%);
+}
+
+/* svg animation */
+
+#about {
+  margin-top: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: white;
+  padding: 10vw 13vw;
+  padding-left: 40vw;
+  width: 100%;
+  background-color: black;
+}
+
+#about img {
+  width: 200px;
+}
+
+#textAbout {
+  width: 25rem;
+}
+
+#textAbout h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+#textAbout p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+#textAbout a {
+  padding: 5px 22px;
+  border: 1px solid white;
+  border-radius: 100px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+#subscribe {
+  padding: 20px 30px;
+  padding-bottom: 10vw;
+  color: white;
+}
+
+#subscribe h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#subscribe h5 {
+  opacity: 0.6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#subscribe a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: none;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: space-between;
+  color: white;
+  padding: 20px 30px;
+}
+
+#footerleft {
+  display: flex;
+  gap: 20px;
+}
+
+#footerright {
+  display: flex;
+  gap: 40px;
+}
+#string {
+  height: 300px;
+  width: 100%;
+}
+
+#footerright a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+/* we use locmotive js for smooth scrolling! */
